@@ -14,6 +14,8 @@
 		267A979D1AD9B04C00ED9467 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267A979C1AD9B04C00ED9467 /* Images.xcassets */; };
 		267A97A01AD9B04C00ED9467 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 267A979E1AD9B04C00ED9467 /* LaunchScreen.xib */; };
 		267A97AC1AD9B04C00ED9467 /* ApplifyBeta1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 267A97AB1AD9B04C00ED9467 /* ApplifyBeta1Tests.m */; };
+		267A97B71AD9B3B700ED9467 /* TwitterCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 267A97B61AD9B3B700ED9467 /* TwitterCustomTableViewCell.m */; };
+		267A97BA1AD9B46100ED9467 /* TwitterClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 267A97B91AD9B46100ED9467 /* TwitterClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		267A97A51AD9B04C00ED9467 /* ApplifyBeta1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApplifyBeta1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		267A97AA1AD9B04C00ED9467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		267A97AB1AD9B04C00ED9467 /* ApplifyBeta1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplifyBeta1Tests.m; sourceTree = "<group>"; };
+		267A97B51AD9B3B700ED9467 /* TwitterCustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterCustomTableViewCell.h; sourceTree = "<group>"; };
+		267A97B61AD9B3B700ED9467 /* TwitterCustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterCustomTableViewCell.m; sourceTree = "<group>"; };
+		267A97B81AD9B46100ED9467 /* TwitterClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterClass.h; sourceTree = "<group>"; };
+		267A97B91AD9B46100ED9467 /* TwitterClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +87,14 @@
 		267A978E1AD9B04C00ED9467 /* ApplifyBeta1 */ = {
 			isa = PBXGroup;
 			children = (
+				267A97991AD9B04C00ED9467 /* Main.storyboard */,
 				267A97931AD9B04C00ED9467 /* AppDelegate.h */,
 				267A97941AD9B04C00ED9467 /* AppDelegate.m */,
 				267A97961AD9B04C00ED9467 /* ViewController.h */,
 				267A97971AD9B04C00ED9467 /* ViewController.m */,
-				267A97991AD9B04C00ED9467 /* Main.storyboard */,
+				267A97B51AD9B3B700ED9467 /* TwitterCustomTableViewCell.h */,
+				267A97B61AD9B3B700ED9467 /* TwitterCustomTableViewCell.m */,
+				267A97BB1AD9B47A00ED9467 /* Model */,
 				267A979C1AD9B04C00ED9467 /* Images.xcassets */,
 				267A979E1AD9B04C00ED9467 /* LaunchScreen.xib */,
 				267A978F1AD9B04C00ED9467 /* Supporting Files */,
@@ -117,6 +126,15 @@
 				267A97AA1AD9B04C00ED9467 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		267A97BB1AD9B47A00ED9467 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				267A97B81AD9B46100ED9467 /* TwitterClass.h */,
+				267A97B91AD9B46100ED9467 /* TwitterClass.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +237,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				267A97BA1AD9B46100ED9467 /* TwitterClass.m in Sources */,
+				267A97B71AD9B3B700ED9467 /* TwitterCustomTableViewCell.m in Sources */,
 				267A97981AD9B04C00ED9467 /* ViewController.m in Sources */,
 				267A97951AD9B04C00ED9467 /* AppDelegate.m in Sources */,
 				267A97921AD9B04C00ED9467 /* main.m in Sources */,
