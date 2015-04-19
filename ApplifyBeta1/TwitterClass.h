@@ -7,26 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UIKit/UIKit.h"
 
 @interface TwitterClass : NSObject
+
 @property NSArray *twitterArray;
+@property (nonatomic, strong) NSString *screenName;
+@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSString *timeDiff;
+@property NSString *text;
 
+@property NSArray *tweetArray;
 
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) UIImage *image;
+@property NSData *profileData;
 
-//@property (nonatomic, strong) NSString *twitterName;
-//@property (nonatomic, strong) NSString *RSVPCount;
-//@property (nonatomic, strong) NSString *hostedBy;
-//@property (nonatomic, strong) NSString *eventDescription;
-//@property (nonatomic, strong) NSString *address;
-//@property (nonatomic, strong) NSURL *eventURL;
-//@property (nonatomic, strong) NSURL *photoURL;
-//@property (nonatomic, strong) NSArray *commentsArray;
-
+@property (nonatomic, strong) UIImage *mainImage;
+@property NSData *mainImageData;
 
 - (void)performSearchWithKeyword:(NSString *)incomingString;
-- (instancetype)initWithDictionary:(NSString *)name;
-//+ (NSArray *)tweetsFromArray:(NSArray *)incomingArray;
-//+ (void)performSearchWithKeyword:(NSString *)incomingString withCompletion:(void (^)(NSArray *events))complete;
 
 @end

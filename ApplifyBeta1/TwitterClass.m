@@ -20,63 +20,61 @@
         if (!connectionError) {
             self.twitterArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&connectionError];
 
+            //loop through JSON array
             for (NSArray *array in self.twitterArray) {
                 NSDictionary *item = array[1];
-                //NSDictionary *text = item[@"text"];
+                //pull elements out
+                self.text = item[@"text"];
 
+                //Screen Name
                 NSDictionary *user = item[@"user"];
-                NSLog(@"%@", user[@"screen_name"]);
+                self.screenName = user[@"screen_name"];
+                //Name
+                self.userName = user[@"name"];
 
-//                NSDate *todaysDate = [NSDate date];
-//                NSLog(@"%@", todaysDate);
-//
-//                TwitterClass *tweetName = [[TwitterClass alloc]initWithDictionary:self.user[@"screen_name"]];
-//                NSLog(@"%@", tweetName);
+                //date object
+                NSString *createdAt = item[@"created_at"];
+                NSDateFormatter *formatter = [NSDateFormatter new];
+                [formatter setDateFormat:@"EEE MMM d HH:mm:ss Z yyyy"];
+                NSDate *tweetDate = [NSDate new];
+                tweetDate = [formatter dateFromString:createdAt];
+                NSDate *nowDate = [NSDate date];
+                NSDateFormatter *format = [NSDateFormatter new];
+                [format setDateFormat:@"EEE MMM d HH:mm:ss Z yyyy"];
+                float timingDiff = [nowDate timeIntervalSinceDate:tweetDate];
+
+                if (timingDiff < 1) {
+                    self.timeDiff = [NSString stringWithFormat:@"Error"];
+                } else if (timingDiff < 60){
+                    self.timeDiff = [NSString stringWithFormat:@"%f ago", timingDiff];
+                } else if (timingDiff < 3600){
+                    int diffRound = round(timingDiff / 60);
+                    self.timeDiff = [NSString stringWithFormat:@"%dm ago", diffRound];
+                } else if (timingDiff < 86400){
+                    int diffRound = round(timingDiff / 60 / 60);
+                    self.timeDiff = [NSString stringWithFormat:@"%d hours's ago", diffRound];
+                } else if (timingDiff < 2629743){
+                    int diffRound = round(timingDiff / 60 / 60 / 24);
+                    self.timeDiff = [NSString stringWithFormat:@"%d day's ago", diffRound];
+                } else if (timingDiff < 18408201) {
+                    int diffRound = round(timingDiff / 60 / 60 / 24 / 7);
+                    self.timeDiff = [NSString stringWithFormat:@"%d, week's ago", diffRound];
+                } else{
+                    self.timeDiff = [NSString stringWithFormat:@"Over a week"];
+                }
+
+                //images
+                NSString *userPicURL = user[@"profile_image_url_https"];
+                NSURL *profileURL = [NSURL URLWithString:userPicURL];
+                self.profileData = [NSData dataWithContentsOfURL:profileURL];
+
+               // NSString *mainPicURL =
 
 
             }
         }
     }];
+
 }
-
-
-//-(instancetype)initWithDictionary:(NSString *)name  {
-//    self = [super init];
-//    if (self) {
-//        self.twitterName = name;
-//    }
-//    return self;
-//}
-//- (instancetype)initWithDictionary:(NSDictionary *)dictionary   {
-//
-//    self = [super init];
-//    if (self) {
-//        self.name = dictionary[@"name"];
-//
-//        self.eventID = dictionary[@"id"];
-//        self.RSVPCount = [NSString stringWithFormat:@"%@",dictionary[@"yes_rsvp_count"]];//they give a NSNumber we change to a string
-//        self.hostedBy = dictionary[@"group"][@"name"];
-//        self.eventDescription = dictionary[@"description"];
-//        self.address = dictionary[@"venue"][@"address"];
-//        self.eventURL = [NSURL URLWithString:dictionary[@"event_url"]];
-//        self.photoURL = [NSURL URLWithString:dictionary[@"photo_url"]];
-//    }
-//    return self;
-//    }
-//}
-
-
-
-
-//+ (NSArray *)tweetsFromArray:(NSArray *)incomingArray
-//{//this method arranges the JSON for you using the loop below
-//    NSMutableArray *newArray = [[NSMutableArray alloc] initWithCapacity:incomingArray.count];
-//    //making a new array from the item array in the JSON file
-//    for (NSDictionary *d in incomingArray) {
-//        TwitterClass *t = [[TwitterClass alloc]initWithDictionary:d];
-//        [newArray addObject:t];
-//    }
-//    return newArray;
-//}
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		264A98B11AE4068F0077AA6A /* FacebookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 264A98B01AE4068F0077AA6A /* FacebookTableViewCell.m */; };
 		267A97921AD9B04C00ED9467 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 267A97911AD9B04C00ED9467 /* main.m */; };
 		267A97951AD9B04C00ED9467 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 267A97941AD9B04C00ED9467 /* AppDelegate.m */; };
 		267A97981AD9B04C00ED9467 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 267A97971AD9B04C00ED9467 /* ViewController.m */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		264A98AF1AE4068F0077AA6A /* FacebookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookTableViewCell.h; sourceTree = "<group>"; };
+		264A98B01AE4068F0077AA6A /* FacebookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookTableViewCell.m; sourceTree = "<group>"; };
 		267A978C1AD9B04C00ED9467 /* ApplifyBeta1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApplifyBeta1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		267A97901AD9B04C00ED9467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		267A97911AD9B04C00ED9467 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 				267A97941AD9B04C00ED9467 /* AppDelegate.m */,
 				267A97961AD9B04C00ED9467 /* ViewController.h */,
 				267A97971AD9B04C00ED9467 /* ViewController.m */,
+				264A98AF1AE4068F0077AA6A /* FacebookTableViewCell.h */,
+				264A98B01AE4068F0077AA6A /* FacebookTableViewCell.m */,
 				267A97B51AD9B3B700ED9467 /* TwitterCustomTableViewCell.h */,
 				267A97B61AD9B3B700ED9467 /* TwitterCustomTableViewCell.m */,
 				267A97BB1AD9B47A00ED9467 /* Model */,
@@ -242,6 +247,7 @@
 				267A97981AD9B04C00ED9467 /* ViewController.m in Sources */,
 				267A97951AD9B04C00ED9467 /* AppDelegate.m in Sources */,
 				267A97921AD9B04C00ED9467 /* main.m in Sources */,
+				264A98B11AE4068F0077AA6A /* FacebookTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +438,7 @@
 				267A97B11AD9B04C00ED9467 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		267A97B21AD9B04C00ED9467 /* Build configuration list for PBXNativeTarget "ApplifyBeta1Tests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +447,7 @@
 				267A97B41AD9B04C00ED9467 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

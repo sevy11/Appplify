@@ -12,12 +12,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *username;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *time;
-@property (weak, nonatomic) IBOutlet UITextView *text;
+
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *userImage;
 @property (weak, nonatomic) IBOutlet UIImageView *twitterLogo;
 @property (weak, nonatomic) IBOutlet UIImageView *tweetImage;
 
--(void)setCell:(NSString *)labelOne andLabel:(NSString *)labelTwo andTextView:(UITextView *)textView;
+- (void)textViewDidChange:(UITextView *)textView;
+
 
 @end

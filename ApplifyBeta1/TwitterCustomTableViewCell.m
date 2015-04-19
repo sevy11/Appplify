@@ -10,16 +10,15 @@
 
 @implementation TwitterCustomTableViewCell
 
-- (void)awakeFromNib {
-    // Initialization code
+- (void)textViewDidChange:(UITextView *)textView
+{
+    CGFloat fixedWidth = textView.frame.size.width;
+    CGSize newSize = [textView sizeThatFits:CGSizeMake(fixedWidth, MAXFLOAT)];
+    CGRect newFrame = textView.frame;
+    newFrame.size = CGSizeMake(fmaxf(newSize.width, fixedWidth), newSize.height);
+    textView.frame = newFrame;
+    textView.scrollEnabled = NO;
+
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
--(void)setCell:(NSString *)labelOne andLabel:(NSString *)labelTwo andTextView:(UITextView *)textView{
-    NSLog(@"setting cell");
-}
 @end
